@@ -1,11 +1,17 @@
 const express = require('express');
 const route= express.Router();
+const Product = require("../model/products");
 
-route.get("/",(req,res)=>{
-    res.send("")
-})
 route.post("/",(req,res)=>{
-    res.send("")
+
+        const newProduct = req.body;
+        const product = Product.create(newProduct);
+        res.status(201).json({product})
+    
+})
+route.get("/",async(req,res)=>{
+    const products = await Product.find();
+    res.send(products)
 })
 
 module.exports=route

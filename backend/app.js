@@ -7,6 +7,7 @@ require('dotenv').config();
 
 //registering middlewares
 app.use(morgan('tiny'))
+app.use(express.json())
 //working with routes
 app.use('/api/v1/products',productRouter)
 //mongodb connection
