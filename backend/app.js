@@ -3,6 +3,7 @@ const app = express();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
+const categoryRouter = require("./routes/category");
 const cors = require("cors");
 require("dotenv").config();
 
@@ -12,11 +13,17 @@ app.use(express.json());
 app.use(cors());
 //working with routes
 app.use("/api/v1/products", productRouter);
+app.use("/api/v1/categories", categoryRouter);
 //mongodb connection
 mongoose
   .connect(
     "mongodb+srv://viateur123:viateur123@cluster0.judpzzu.mongodb.net/product?retryWrites=true&w=majority",
-    {}
+
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000,
+    }
   )
   .then(() => console.log("successfully connected to database"))
   .catch((err) => console.log(err));
