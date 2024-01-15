@@ -5,6 +5,9 @@ const Category = require("../model/category");
 
 router.get("/", async (req, res) => {
   const categories = await Category.find();
+  if (!categories) {
+    return res.send("No categories found");
+  }
   res.send(categories);
 });
 router.post("/", async (req, res) => {
