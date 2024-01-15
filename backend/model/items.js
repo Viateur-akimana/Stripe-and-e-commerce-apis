@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const itemSchema = mongoose.Schema({
+const orderItemSchema = mongoose.Schema({
   quantity: {
     type: Number,
     required: true,
@@ -11,6 +11,4 @@ const itemSchema = mongoose.Schema({
   },
 });
 
-const item = mongoose.model("item", itemSchema);
-
-module.exports = item;
+exports.OrderItem = mongoose.model("OrderItem", orderItemSchema);
