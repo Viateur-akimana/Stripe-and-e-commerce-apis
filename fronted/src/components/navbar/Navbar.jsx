@@ -63,7 +63,7 @@ const Navbar = () => {
           </Link>
         </button>
         <Link to="/cart">
-          <img src={cart} alt="" />
+          <img  style={{fontSize:"xx-large"}} src={cart} alt="" />
         </Link>
         <div className="navbar-cart-count">0</div>
       </div>

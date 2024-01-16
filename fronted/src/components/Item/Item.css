@@ -1,5 +1,6 @@
 .item {
   width: 350px;
+  display: flex;
 }
 .item p {
   margin: 6px 0 px;
@@ -17,7 +18,7 @@
 .item-price-old {
   color: gray;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 200;
   text-decoration: line-through;
 }
 .item:active {
