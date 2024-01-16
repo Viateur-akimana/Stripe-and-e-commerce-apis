@@ -6,7 +6,7 @@
 }
 
 .item-prices {
-  display: flex;
+  display: flex !important;
   gap: 20px;
 }
 .item-price-new {
@@ -17,10 +17,13 @@
 .item-price-old {
   color: gray;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: line-through;
 }
 .item:active {
   transform: scale(1.05);
   transition: 0.6s;
+}
+.item-price-old {
+  font-weight: 200;
 }

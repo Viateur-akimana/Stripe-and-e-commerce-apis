@@ -3,5 +3,33 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    height: 90vh;
+
+}
+ 
+.popular h1{
+    color: rgb(61, 59, 59);
+    font-size: 50px;
+    font-weight: 600;
+}
+.popular hr{
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: rgb(32, 30, 30);
+}
+.popular-items{
+    display: flex;
+    margin-top: 50px;
+    gap: 35px;
+    justify-content: space-around;
+
+}
+.item{
+    margin: 20px;
+}
+.item img{
+    width: 300px;
+    height: auto;
 
 }
