@@ -12,6 +12,7 @@
 img {
   width: 25%;
   height: auto;
+  background-color: white;
 }
 .nav-logo p {
   color: black;
@@ -50,19 +51,19 @@ img {
   font-weight: 300;
   border-radius: 75px;
 }
-.navbar-login button:active{
-    background-color: antiquewhite;
-    cursor: pointer;
+.navbar-login button:active {
+  background-color: antiquewhite;
+  cursor: pointer;
 }
-.navbar-cart-count{
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -25px;
-    margin-left: -37px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
+.navbar-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+  margin-left: -37px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
 }
