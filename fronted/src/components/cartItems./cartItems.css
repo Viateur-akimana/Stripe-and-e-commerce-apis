@@ -1,0 +1,96 @@
+.cartItems {
+  margin: 100px 170px;
+}
+
+.cartItems hr {
+  height: 3px;
+  background-color: #e2e2e2;
+  border: 0;
+}
+.main-cartItems {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  gap: 75px;
+  padding: 20px 0;
+  align-items: center;
+  font-size: 18px;
+  color: #454545;
+  font-weight: 600;
+}
+.cartFormat {
+  font-size: 17px;
+  font-weight: 500;
+}
+.cart_icon {
+  height: 62px;
+}
+.remove_icon {
+  width: 15px;
+  margin: 0 40px;
+  cursor: pointer;
+}
+.cart_button-quantity {
+  width: 64px;
+  height: 50px;
+  border: 2px solid #ebebeb;
+  background-color: #fff;
+}
+.cartItems-down {
+  display: flex;
+  margin: 100px 0;
+}
+.cartTotal-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  gap: 40px;
+}
+.total-items-cart {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+.totalCartItem button {
+  width: 262px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #ff5a5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cartItem-promocode {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+}
+.cartItem-promocode p{
+    color: #555;
+}
+.cartItems-promocode-box{
+    width: 504px;
+    padding-left: 20px;
+     height: 58px;
+    margin-top: 15px;
+}
+.cartItems-promocode-box input{
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 330px;
+    height: 50px;
+    font-size: 16px;
+
+}
+.cartItems-promocode-box button{
+    width: 170px;
+    height: 58px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
