@@ -47,7 +47,9 @@
   font-weight: 500;
 }
 .login span {
-  color: red;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(221, 59, 31);
   font-weight: 600;
 }
 .login-agree {
