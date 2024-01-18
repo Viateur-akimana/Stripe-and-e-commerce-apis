@@ -67,3 +67,10 @@ img {
   color: white;
   border-radius: 50%;
 }
+
+@media(max-width){
+  .navbar {
+    padding: 12px 50px;
+  }
+  
+}

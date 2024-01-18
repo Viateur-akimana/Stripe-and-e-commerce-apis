@@ -9,6 +9,7 @@ import mens_banner from "./components/Assets/banner_mens.png";
 import womens_banner from "./components/Assets/banner_women.png";
 import kids_banner from "./components/Assets/banner_kids.png";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
             path="/kids"
             element={<ShopCategory banner={kids_banner} category="kids" />}
           />
-          <Route path="/cart" element={<ShopCategory category="cart" />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />

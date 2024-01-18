@@ -28,9 +28,17 @@ router.get("/:id", async (req, res) => {
   res.send(category);
 });
 router.put("/:id", async (req, res) => {
-  const category = await Category.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  });
+  const category = await Category.findByIdAndUpdate(
+    req.params.id,
+    {
+      name: req.body.name,
+      icon: req.body.icon,
+      color: req.body.color,
+    },
+    {
+      new: true,
+    }
+  );
   if (!category) {
     res.send({ msg: "no category with id specified" });
   }

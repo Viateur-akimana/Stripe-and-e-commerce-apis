@@ -59,7 +59,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-login">
-        <button>
+        <button>  
           <Link style={{ textDecoration: "none" }} to="/login">
             Login
           </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
         <Link to="/cart">
           <img  style={{fontSize:"xx-large"}} src={cart} alt="" />
         </Link>
-        <div className="navbar-cart-count">{getTotalCartItems}</div>
+        <div className="navbar-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
   );

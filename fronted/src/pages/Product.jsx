@@ -9,13 +9,13 @@ import RelatedProducts from "../components/RelatedProducts/RelatedProducts";
 const Product = () => {
   const { all_products } = useContext(shopContext);
   const { productId } = useParams();
-  const product = all_products.find((e) => e.id === Number(productId));
+  let product = all_products.find((e) => e.id === Number(productId));
   return (
     <div className="product">
       <BreadCrums product={product} />
-      <ProductDisplay/>
-      <BoxDescription/>
-      <RelatedProducts/>
+      <ProductDisplay />
+      <BoxDescription />
+      <RelatedProducts />
     </div>
   );
 };

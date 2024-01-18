@@ -18,13 +18,19 @@
     border-radius: 10px;
     background-color: rgb(32, 30, 30);
 }
-.popular-items{
-    display: flex;
-    margin-top: 50px;
-    gap: 35px;
-    justify-content: space-around;
-
+@media (max-width:1280px) {
+    .popular-items{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    
+    
+    }
 }
+
 .item{
     margin: 20px;
 }
