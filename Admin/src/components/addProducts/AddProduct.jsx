@@ -16,6 +16,41 @@ const AddProduct = () => {
     setProductDetails({ ...productDetails, [e.target.name]: e.target.value });
   };
 
+  const addProduct = async () => {
+    let responseData = null;
+    let product = productDetails;
+    let formData = new FormData();
+    formData.append(product, image);
+
+    await fetch("localhost:8080/uploads", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+      },
+      body: formData,
+    })
+      .then((resData) => resData.json())
+      .then((data) => (responseData = data));
+
+    if (responseData.success) {
+      product.image = responseData.image;
+
+      await fetch("http://localhost:5173/add_product", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      })
+        .then((resData) => resData.json())
+        .then((data) => {
+          data.success
+            ? alert("Product added")
+            : alert("Failed to add the product");
+        });
+    }
+  };
   const imageHandler = (e) => {
     setImage(e.target.files[0]);
   };
@@ -83,7 +118,9 @@ const AddProduct = () => {
           hidden
         />
       </div>
-      <button className="add">ADD</button>
+      <button className="add" onClick={() => addProduct()}>
+        ADD
+      </button>
     </div>
   );
 };

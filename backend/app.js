@@ -6,7 +6,7 @@ const productRouter = require("./routes/product");
 const categoryRouter = require("./routes/category");
 const userRouter = require("./routes/user");
 const cors = require("cors");
-const multer = require("multer")
+const multer = require("multer");
 
 require("dotenv").config();
 
@@ -22,22 +22,23 @@ app.use("/api/v1/users", userRouter);
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'Home/Desktop/nodejs/e-commerce/backend/public/images')
+    cb(null, "Home/Desktop/nodejs/e-commerce/backend/public/images");
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-    cb(null, file.originalname + '-' + uniqueSuffix)
-  }
-})
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    cb(null, file.originalname + "-" + uniqueSuffix);
+  },
+});
 
-const upload = multer({ storage: storage })
-app.post("/uploads",upload.single("products") ,(req,res)=>{
-  res.send('File uploaded successfully!');
-// res.json({
-//   success:true,
-//   data: req.file
-// })
-})
+const upload = multer({ storage: storage });
+app.post("/uploads", upload.single("file"), (req, res) => {
+  // res.send(req.file);
+  console.log(req.file);
+  res.json({
+    success: true,
+    data: req.file,
+  });
+});
 mongoose
   .connect(
     "mongodb+srv://viateur123:viateur123@cluster0.judpzzu.mongodb.net/product?retryWrites=true&w=majority",

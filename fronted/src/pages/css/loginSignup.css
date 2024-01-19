@@ -1,26 +1,26 @@
-.loginSignup {
+.loginSignUp {
   width: 100%;
   height: 80vh;
   padding-top: 100px;
   background-color: aliceblue;
 }
-.loginSignup-container {
+.loginSignUp-container {
   width: 580px;
   height: 600px;
   margin: auto;
   padding: 40px 60px;
   background-color: aliceblue;
 }
-.loginSignup-container h1 {
+.loginSignUp-container h1 {
   margin: 20px 0;
 }
-.loginSignup-fields {
+.loginSignUp-fields {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   gap: 29px;
 }
-.loginSignup-fields input {
+.loginSignUp-fields input {
   height: 72px;
   width: 100%;
   padding-left: 20px;
@@ -29,7 +29,7 @@
   color: rgb(161, 157, 157);
   font-size: 18px;
 }
-.loginSignup-fields button {
+.loginSignUp-fields button {
   width: 580px;
   height: 72px;
   color: wheat;
