@@ -1,7 +1,7 @@
 // import React from 'react'
-
+import remove_icon from "../../Assets/cross_icon.png"
 import { useState, useEffect } from "react";
-import remove_icon from "../../Assets/cross_icon.svg"
+
 
 const ListProduct = () => {
   const [allProducts, setAllProduct] = useState([]);
