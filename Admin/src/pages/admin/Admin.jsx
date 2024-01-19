@@ -1,12 +1,20 @@
-import React from 'react'
-import Sidebar from '../../components/sidebar/Sidebar'
+// import React from 'react'
+import AddProduct from "../../components/addProducts/AddProduct";
+import ListProduct from "../../components/listProduct/ListProduct";
+import Sidebar from "../../components/sidebar/Sidebar";
+import { Routes, Route } from "react-router-dom";
 
 const Admin = () => {
   return (
-    <div className='admin'>
-        <Sidebar/>
+    <div className="admin">
+      <Sidebar />
+      <Routes>
+        <Route to="/add_product" element={<AddProduct />} />
+        <Route to="/product_list" element={<ListProduct />} />
+      </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default Admin
+export default Admin;
+ 
