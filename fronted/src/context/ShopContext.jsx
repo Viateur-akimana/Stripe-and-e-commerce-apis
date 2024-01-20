@@ -39,6 +39,19 @@ const ShopContextProvider = (props) => {
 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    if (localStorage.getItem("Auth-token")) {
+      fetch("localhost:3000/addToCart", {
+        method: "POST",
+        headers: {
+          Accept: "application/form-data",
+          "Auth-token": `${localStorage.getItem("Auth-token")}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ itemId: itemId }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
   };
 
   const getTotalCartAmount = () => {
