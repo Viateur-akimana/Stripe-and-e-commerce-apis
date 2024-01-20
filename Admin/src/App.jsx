@@ -1,13 +1,16 @@
-import Navbar from "./components/navbar/Navbar";
-import Admin from "./pages/admin/Admin";
+// import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Admin from './pages/admin/Admin';
+import Navbar from './components/navbar/Navbar';
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div>
+    
       <Navbar />
-      <Admin />
-    </>
+      <Route path="/admin" element={<Admin />} />
+    </div>
   );
-}
+};
 
 export default App;

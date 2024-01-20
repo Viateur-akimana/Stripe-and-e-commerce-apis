@@ -1,8 +1,9 @@
-// import React from 'react'
+// import React from 'react';
+import { Link } from 'react-router-dom'; // Fix import statement
 import "./sidebar.css";
-import Link from "react-router-dom";
 import add_product from "../../Assets/Product_Cart.svg";
 import productList from "../../Assets/Product_list_icon.svg";
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -15,7 +16,7 @@ const Sidebar = () => {
       <Link to={"/product_list"}>
         <div className="sidebar_item">
           <img src={productList} alt="" />
-          <p>Add product</p>
+          <p>Product list</p> {/* Fix text here */}
         </div>
       </Link>
     </div>
