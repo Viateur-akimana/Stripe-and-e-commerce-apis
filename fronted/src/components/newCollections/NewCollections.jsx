@@ -9,7 +9,7 @@ const NewCollections = () => {
     fetch("localhost:3000/newCOllection")
       .then((res) => res.json())
       .then((data) => setNewCollection(data));
-  });
+  },[]);
   return (
     <div className="collection">
       <h1>New Collection</h1>
