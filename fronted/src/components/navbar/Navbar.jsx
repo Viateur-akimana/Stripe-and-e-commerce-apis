@@ -8,7 +8,7 @@ import { shopContext } from "../../context/ShopContext";
 const Navbar = () => {
   // Destructuring the array returned by useState
   const [menu, setMenu] = useState("Shop");
-  const { getTotalCartItems } = useContext(shopContext)
+  const { getTotalCartItems } = useContext(shopContext);
 
   return (
     <div className="navbar">
@@ -59,13 +59,18 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-login">
-        <button>  
-          <Link style={{ textDecoration: "none" }} to="/login">
-            Login
-          </Link>
-        </button>
+        {localStorage.getItem("Auth-token") ? (
+          <button onClick={()=>localStorage.removeItem("Auth-token")}>Logout</button>
+        ) : (
+          <button>
+            <Link style={{ textDecoration: "none" }} to="/login">
+              Login
+            </Link>
+          </button>
+        )}
+
         <Link to="/cart">
-          <img  style={{fontSize:"xx-large"}} src={cart} alt="" />
+          <img style={{ fontSize: "xx-large" }} src={cart} alt="" />
         </Link>
         <div className="navbar-cart-count">{getTotalCartItems()}</div>
       </div>
