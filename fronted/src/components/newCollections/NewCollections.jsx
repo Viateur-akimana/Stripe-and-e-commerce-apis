@@ -1,16 +1,16 @@
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./NewCollections.css";
 import Item from "../Item/Item";
-import newCollection from "../Assets/new_collections"
+// import newCollection from "../Assets/new_collections"
 
 const NewCollections = () => {
-  // const [newCollection, setNewCollection] = useState([]);
+  const [newCollection, setNewCollection] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("localhost:3000/newCOllection")
-  //     .then((res) => res.json())
-  //     .then((data) => setNewCollection(data));
-  // },[]);
+  useEffect(() => {
+    fetch("localhost:3000/newCOllection")
+      .then((res) => res.json())
+      .then((data) => setNewCollection(data));
+  },[]);
   return (
     <div className="collection">
       <h1>New Collection</h1>
