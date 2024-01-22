@@ -16,7 +16,7 @@ const Sidebar = () => {
       <Link to={"/product_list"}>
         <div className="sidebar_item">
           <img src={productList} alt="" />
-          <p>Product list</p> {/* Fix text here */}
+          <p>Product list</p> 
         </div>
       </Link>
     </div>
